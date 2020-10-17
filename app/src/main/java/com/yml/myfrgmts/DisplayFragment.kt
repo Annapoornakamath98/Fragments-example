@@ -28,11 +28,7 @@ class DisplayFragment : Fragment(R.layout.fragment_display) {
                         Toast.makeText(context,"Empty",Toast.LENGTH_SHORT).show()
                     else{
                         val uList:ArrayList<String> = ArrayList()
-                        list.forEach{uList.add(it.word)
-                            uList.add(it.singer)
-                            uList.add(it.movie)
-                            uList.add(it.dur)
-                        }
+                        list.forEach{uList.add(it.word)}
                         recycler.adapter=SongListAdapter(uList)
                     }
                 }
