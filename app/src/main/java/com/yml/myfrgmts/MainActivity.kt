@@ -19,29 +19,26 @@ class MainActivity : AppCompatActivity() {
         val secondFragment= SearchUpdateFragment()
         val thirdFragment= DisplayFragment()
         button1.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flFragment,firstFragment)
-                addToBackStack(null)
+            supportFragmentManager.beginTransaction().
+                replace(R.id.flFragment,firstFragment).
+                addToBackStack(null).
                 commit()
-            }
+
         }
         button2.setOnClickListener {
             supportFragmentManager
                     .beginTransaction()
-                    .apply {
-                        replace(R.id.flFragment,secondFragment)
-                        addToBackStack(null)
-                        commit()
-                    }
+                    .replace(R.id.flFragment,secondFragment)
+                    .addToBackStack(null)
+                    .commit()
+
         }
         button3.setOnClickListener {
             supportFragmentManager
                 .beginTransaction()
-                .apply {
-                    replace(R.id.flFragment,thirdFragment)
-                    addToBackStack(null)
-                    commit()
-                }
+                    .replace(R.id.flFragment,thirdFragment)
+                    .addToBackStack(null)
+                    .commit()
         }
 
     }
